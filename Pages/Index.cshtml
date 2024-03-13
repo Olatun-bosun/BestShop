@@ -5,7 +5,12 @@
     ViewData["NoContainer"] = true;
 }
 
+
 <style>
+
+
+
+
 .book-item img {
     width: 100%;
     height: 260px;
@@ -23,36 +28,116 @@
 </style>
 
 <!-- Hero section -->
-<div class="py-5" style="background-color: sandybrown;">
-    <div class="container text-white">
-        <div class="row">
-            <div class="col-md-6 pb-3">
-                <h1 class="display-2"><strong>Best Books</strong></h1>
-                <br />
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active"@*  style="background-image: url"(/images/books.png)" *@>
+            <img src="/images/slide3.jpg" alt="..." width="100%" height="500ph">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Best Foods</h5>
                 <p>
-                    We have the best books in the world. You will love reading them.
-                    We have a large selection of books from different categories.
-                    You will definitely find what makes you happy.
+                    We have the best Products in the world. What you see is what you get very fresh.
                 </p>
-                <br />
                 <form class="d-flex" action="/Books">
-                    <input class="form-control me-2" name="search" placeholder="Search by Title or Author">
+                    <input class="form-control me-2" name="search" placeholder="Search Product">
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
-
             </div>
-            <div class="col-md-6">
-                <img src="/images/books.png" class="img-fluid rounded" alt="">
+        </div>
+        <div class="carousel-item" @* style="background-image: url("/images/logo.png") *@>
+            <img src="/images/slide4.jpg" alt="..." width="100%" height="500ph">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Benefits</h5>
+                <p>Varieties to choose from, excellent pricing, great customer support, unmatched goods transportation system among others.</p>
+                <form class="d-flex" action="/Books">
+                    <input class="form-control me-2" name="search" placeholder="Search Product">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+         <div class="carousel-item" @* style="background-image: url("/images/logo.png") *@>
+            <img src="/images/slide9.jpg" alt="..." width="100%" height="500ph">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Shop Online</h5>
+                <p>Life is is easier when you do market runs online</p>
+                <form class="d-flex" action="/Books">
+                    <input class="form-control me-2" name="search" placeholder="Search Product">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+       
+        <div class="carousel-item" @* style="background-image: url("/images/logo.png") *@>
+            <img src="/images/slide7.jpg" alt="..." width="100%" height="500ph">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Shop With Us</h5>
+                <p>
+                    We Provide Excellent
+                    Shopping & Distribution Services Beyond Imagination
+                </p>
+                <form class="d-flex" action="/Books">
+                    <input class="form-control me-2" name="search" placeholder="Search Product">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div class="carousel-item" @* style="background-image: url("/images/logo.png") *@>
+            <img src="/images/slide8.jpg" alt="..." width="100%" height="500ph">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Why Us?</h5>
+                <p>
+                    Our outstanding goods distribution prowess and excellent services in Baking, Pastry and Catering set us aside from the rest.
+                </p>
+                <form class="d-flex" action="/Books">
+                    <input class="form-control me-2" name="search" placeholder="Search Product">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+       @*  <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+        </div> *@
+        
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>   
+    </button>
+</div>
+@* 
+    <div class="py-5" style="background-color: sandybrown;">
+        <div class="container text-white">
+            <div class="row">
+                <div class="col-md-6 pb-3">
+                    <h1 class="display-2"><strong>Best Books</strong></h1>
+                    <br />
+                    <p>
+                        We have the best books in the world. You will love reading them.
+                        We have a large selection of books from different categories.
+                        You will definitely find what makes you happy.
+                    </p>
+                    <br />
+                    <form class="d-flex" action="/Books">
+                        <input class="form-control me-2" name="search" placeholder="Search by Title or Author">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/books.png" class="img-fluid rounded" alt="">
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</div> *@
 
 <!-- Newest Books Section -->
 <div class="py-5">
     <div class="container">
-        <h1 class="pb-5 text-center display-5"><strong>Newest Books</strong></h1>
+        <h1 class="pb-5 text-center display-5"><strong>Newest Products</strong></h1>
         <div class="row">
             @foreach(var item in Model.listNewestBooks)
             {
